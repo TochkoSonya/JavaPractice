@@ -5,6 +5,7 @@ import com.java_patterns.generating.abstract_factory.specific_factory.AsusFactor
 import com.java_patterns.generating.builder.Table;
 import com.java_patterns.generating.factory.Factory;
 import com.java_patterns.generating.factory.specific_factory.SamsungFactory;
+import com.java_patterns.generating.singleton.Singleton;
 
 public class Main {
 
@@ -34,6 +35,10 @@ public class Main {
                 .build();
 
         System.out.println(table3.toString());
+
+        //Singleton
+        Singleton singleton=Singleton.getInstance();
+        System.out.println(singleton.toString());
 
     }
 }
