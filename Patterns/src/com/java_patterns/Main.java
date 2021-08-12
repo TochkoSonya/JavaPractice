@@ -6,6 +6,7 @@ import com.java_patterns.generating.builder.Table;
 import com.java_patterns.generating.factory.Factory;
 import com.java_patterns.generating.factory.specific_factory.SamsungFactory;
 import com.java_patterns.generating.singleton.Singleton;
+import com.java_patterns.structural.adapter.*;
 
 public class Main {
 
@@ -40,5 +41,15 @@ public class Main {
         Singleton singleton=Singleton.getInstance();
         System.out.println(singleton.toString());
 
+        //-----------------------------------------
+
+        //Adapter
+        BaseTrain train = new Train();
+        TransportManagement manageTrain= new TransportManagement(train);
+        manageTrain.transport();
+
+        Adapter airplaneAdapter= new Adapter(new Airplane());
+        TransportManagement manageAirplane = new TransportManagement(airplaneAdapter);
+        manageAirplane.transport();
     }
 }
