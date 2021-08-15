@@ -4,9 +4,14 @@ import com.java_patterns.generating.abstract_factory.DeviceFactory;
 import com.java_patterns.generating.abstract_factory.specific_factory.AsusFactory;
 import com.java_patterns.generating.builder.Table;
 import com.java_patterns.generating.factory.Factory;
+import com.java_patterns.generating.factory.Notebook;
 import com.java_patterns.generating.factory.specific_factory.SamsungFactory;
 import com.java_patterns.generating.singleton.Singleton;
 import com.java_patterns.structural.adapter.*;
+
+import com.java_patterns.structural.bridge.cpu.CPU;
+import com.java_patterns.structural.bridge.cpu.IntelCoreI5;
+import com.java_patterns.structural.bridge.notebook.AsusNotebook;
 
 public class Main {
 
@@ -51,5 +56,11 @@ public class Main {
         Adapter airplaneAdapter= new Adapter(new Airplane());
         TransportManagement manageAirplane = new TransportManagement(airplaneAdapter);
         manageAirplane.transport();
+
+        //Bridge
+        CPU coreI5 = new IntelCoreI5();
+        Notebook asusNotebook=new AsusNotebook(coreI5);
+        asusNotebook.create();
+
     }
 }
