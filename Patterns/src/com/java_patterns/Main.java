@@ -12,6 +12,8 @@ import com.java_patterns.structural.adapter.*;
 import com.java_patterns.structural.bridge.cpu.CPU;
 import com.java_patterns.structural.bridge.cpu.IntelCoreI5;
 import com.java_patterns.structural.bridge.notebook.AsusNotebook;
+import com.java_patterns.structural.proxy.CommonInterface;
+import com.java_patterns.structural.proxy.DeviceProxy;
 
 public class Main {
 
@@ -58,9 +60,12 @@ public class Main {
         manageAirplane.transport();
 
         //Bridge
-        CPU coreI5 = new IntelCoreI5();
-        Notebook asusNotebook=new AsusNotebook(coreI5);
-        asusNotebook.create();
+//        CPU coreI5 = new IntelCoreI5();
+//        Notebook asusNotebook=new AsusNotebook(coreI5);
+//        asusNotebook.create();
 
+        CommonInterface device= new DeviceProxy();
+        device.deviceOn();
+        device.deviceOff();
     }
 }
