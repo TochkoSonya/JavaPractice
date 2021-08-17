@@ -14,6 +14,11 @@ import com.java_patterns.structural.bridge.cpu.IntelCoreI5;
 import com.java_patterns.structural.bridge.notebook.AsusNotebook;
 import com.java_patterns.structural.proxy.CommonInterface;
 import com.java_patterns.structural.proxy.DeviceProxy;
+import com.java_patterns.structural.wrapper.Letter;
+import com.java_patterns.structural.wrapper.LetterInterface;
+import com.java_patterns.structural.wrapper.decorators.LetterDecorator;
+import com.java_patterns.structural.wrapper.decorators.MarkDecorator;
+import com.java_patterns.structural.wrapper.decorators.ParcelDecorator;
 
 public class Main {
 
@@ -64,8 +69,20 @@ public class Main {
 //        Notebook asusNotebook=new AsusNotebook(coreI5);
 //        asusNotebook.create();
 
+        //Proxy
         CommonInterface device= new DeviceProxy();
         device.deviceOn();
         device.deviceOff();
+
+        //Wrapper
+        LetterInterface letter1= new Letter();
+        letter1 = new MarkDecorator(letter1);
+        letter1.sendMessage();
+
+        LetterInterface letter2 = new Letter();
+        letter2= new MarkDecorator(letter2);
+        letter2 = new ParcelDecorator(letter2);
+        letter2.sendMessage();
+
     }
 }
