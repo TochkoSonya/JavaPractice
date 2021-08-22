@@ -9,5 +9,11 @@ public class Main {
         Fibonacci fibonacci = new Fibonacci();
         fibonacci.timeWithFor(n);
         fibonacci.timeWithRecursive(n);
+        
+        //array invert
+
+
+
+
     }
 }
