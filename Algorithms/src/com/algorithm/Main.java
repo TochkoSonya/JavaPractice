@@ -11,15 +11,15 @@ public class Main {
 
     public static void main(String[] args) {
         //fibonacci
-//        int n=25;
+//        int n = 25;
 //        Fibonacci fibonacci = new Fibonacci();
 //        fibonacci.timeWithFor(n);
 //        fibonacci.timeWithRecursive(n);
 //
 //        //array invert
-//        Object[] array1= {1,2,3,4,5,6};
-//        Object[] array2= {1,2,3,4,5};
-//        String[] array3= {"q","w","e"};
+//        Object[] array1 = {1, 2, 3, 4, 5, 6};
+//        Object[] array2 = {1, 2, 3, 4, 5};
+//        String[] array3 = {"q", "w", "e"};
 //
 //        Object[] result1 = ArrayReverse.reverseWithFor(array1);
 //        System.out.println(Arrays.toString(result1));
@@ -31,11 +31,12 @@ public class Main {
 //        System.out.println(Arrays.toString(result3));
 
         //bubble sort
-        int[] array1= {10, 5, 88, 66, 111, 0, 34, 29};
+        int[] array1 = {10, 5, 88, 66, 111, 0, 34, 29};
         //BubbleSort.sort(array1);
         System.out.println(Arrays.toString(array1));
 
         SelectionSort.sort(array1);
         System.out.println(Arrays.toString(array1));
+
     }
 }
