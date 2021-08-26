@@ -12,6 +12,7 @@ import com.java_patterns.structural.adapter.*;
 import com.java_patterns.structural.bridge.cpu.CPU;
 import com.java_patterns.structural.bridge.cpu.IntelCoreI5;
 import com.java_patterns.structural.bridge.notebook.AsusNotebook;
+import com.java_patterns.structural.facade.Facade;
 import com.java_patterns.structural.proxy.CommonInterface;
 import com.java_patterns.structural.proxy.DeviceProxy;
 import com.java_patterns.structural.wrapper.Letter;
@@ -84,5 +85,8 @@ public class Main {
 //        letter2 = new ParcelDecorator(letter2);
 //        letter2.sendMessage();
 
+        Facade facade = new Facade();
+        facade.computerOn();
+        facade.computerOff();
     }
 }
