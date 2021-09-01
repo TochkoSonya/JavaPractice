@@ -85,8 +85,12 @@ public class Main {
 //        letter2 = new ParcelDecorator(letter2);
 //        letter2.sendMessage();
 
-        Facade facade = new Facade();
-        facade.computerOn();
-        facade.computerOff();
+//        //facade
+//        Facade facade = new Facade();
+//        facade.computerOn();
+//        facade.computerOff();
+
+
+        //strategy
     }
 }
