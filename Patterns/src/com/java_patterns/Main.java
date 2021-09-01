@@ -97,7 +97,7 @@ public class Main {
 
         //strategy
         TranslateStrategy strategy = new EnglishRussianTranslater();
-        strategy.translate();
+        strategy.translate("Hello");
         strategy = new RussianItalianTranslater();
         strategy.saveTranslation();
 
