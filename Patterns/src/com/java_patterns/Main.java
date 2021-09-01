@@ -1,5 +1,9 @@
 package com.java_patterns;
 
+import com.java_patterns.behavioral.strategy.EnglishRussianTranslater;
+import com.java_patterns.behavioral.strategy.ItalianRussianTranslater;
+import com.java_patterns.behavioral.strategy.RussianItalianTranslater;
+import com.java_patterns.behavioral.strategy.TranslateStrategy;
 import com.java_patterns.generating.abstract_factory.DeviceFactory;
 import com.java_patterns.generating.abstract_factory.specific_factory.AsusFactory;
 import com.java_patterns.generating.builder.Table;
@@ -92,5 +96,10 @@ public class Main {
 
 
         //strategy
+        TranslateStrategy strategy = new EnglishRussianTranslater();
+        strategy.translate();
+        strategy = new RussianItalianTranslater();
+        strategy.saveTranslation();
+
     }
 }
