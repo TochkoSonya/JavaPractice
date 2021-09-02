@@ -7,10 +7,12 @@ public abstract class Messenger {
     Messenger() {}
 
     public void sendMessage() {
+        logIn();
         System.out.println("Message sent");
     }
     public void receiveMessage() {
         System.out.println("Message received");
+        logOut();
     }
 
     abstract void logIn();

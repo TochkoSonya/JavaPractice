@@ -4,6 +4,8 @@ import com.java_patterns.behavioral.strategy.EnglishRussianTranslater;
 import com.java_patterns.behavioral.strategy.ItalianRussianTranslater;
 import com.java_patterns.behavioral.strategy.RussianItalianTranslater;
 import com.java_patterns.behavioral.strategy.TranslateStrategy;
+import com.java_patterns.behavioral.template_method.Messenger;
+import com.java_patterns.behavioral.template_method.Telegram;
 import com.java_patterns.generating.abstract_factory.DeviceFactory;
 import com.java_patterns.generating.abstract_factory.specific_factory.AsusFactory;
 import com.java_patterns.generating.builder.Table;
@@ -95,11 +97,19 @@ public class Main {
 //        facade.computerOff();
 
 
-        //strategy
-        TranslateStrategy strategy = new EnglishRussianTranslater();
-        strategy.translate("Hello");
-        strategy = new RussianItalianTranslater();
-        strategy.saveTranslation();
+//        //strategy
+//        TranslateStrategy strategy = new EnglishRussianTranslater();
+//        strategy.translate("Hello");
+//        strategy = new RussianItalianTranslater();
+//        strategy.saveTranslation();
+
+        //template_method
+        String userName = "Tom";
+        String password = "12345";
+
+        Messenger messenger = new Telegram(userName,password);
+        messenger.sendMessage();
+        messenger.receiveMessage();
 
     }
 }
