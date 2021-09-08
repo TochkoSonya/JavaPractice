@@ -1,5 +1,10 @@
 package com.java_patterns;
 
+import com.java_patterns.behavioral.mediator.components.CPU;
+import com.java_patterns.behavioral.mediator.components.Component;
+import com.java_patterns.behavioral.mediator.components.IO;
+import com.java_patterns.behavioral.mediator.mediators.BUS;
+import com.java_patterns.behavioral.mediator.mediators.Mediator;
 import com.java_patterns.behavioral.strategy.EnglishRussianTranslater;
 import com.java_patterns.behavioral.strategy.ItalianRussianTranslater;
 import com.java_patterns.behavioral.strategy.RussianItalianTranslater;
@@ -15,7 +20,7 @@ import com.java_patterns.generating.factory.specific_factory.SamsungFactory;
 import com.java_patterns.generating.singleton.Singleton;
 import com.java_patterns.structural.adapter.*;
 
-import com.java_patterns.structural.bridge.cpu.CPU;
+//import com.java_patterns.structural.bridge.cpu.CPU;
 import com.java_patterns.structural.bridge.cpu.IntelCoreI5;
 import com.java_patterns.structural.bridge.notebook.AsusNotebook;
 import com.java_patterns.structural.facade.Facade;
@@ -102,14 +107,23 @@ public class Main {
 //        strategy.translate("Hello");
 //        strategy = new RussianItalianTranslater();
 //        strategy.saveTranslation();
+//
+//        //template_method
+//        String userName = "Tom";
+//        String password = "12345";
+//
+//        Messenger messenger = new Telegram(userName,password);
+//        messenger.sendMessage();
+//        messenger.receiveMessage();
 
-        //template_method
-        String userName = "Tom";
-        String password = "12345";
+        //mediator
+        Mediator mediator = new BUS();
 
-        Messenger messenger = new Telegram(userName,password);
-        messenger.sendMessage();
-        messenger.receiveMessage();
+        Component cpu = new CPU();
+        Component io = new IO();
+        cpu.setMediator(mediator);
+        io.setMediator(mediator);
 
+        mediator.sendMessage(cpu,"Hello CPU");
     }
 }
