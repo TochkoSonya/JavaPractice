@@ -1,6 +1,7 @@
 package com.algorithm;
 
 import com.algorithm.fibonacci.Fibonacci;
+import com.algorithm.prime_check.PrimeCheck;
 import com.algorithm.reverse_array.ArrayReverse;
 import com.algorithm.reverse_string.StringReverse;
 import com.algorithm.sort.bubble_sort.BubbleSort;
@@ -43,6 +44,7 @@ public class Main {
         StringReverse.ReverseWithStringBuilder("Hello_World");
         StringReverse.ReverseWithArray("Hello_world");
 
+        PrimeCheck.IsPrimeNumber(71);
 
     }
 }
