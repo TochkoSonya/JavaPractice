@@ -2,6 +2,7 @@ package com.algorithm;
 
 import com.algorithm.fibonacci.Fibonacci;
 import com.algorithm.reverse_array.ArrayReverse;
+import com.algorithm.reverse_string.StringReverse;
 import com.algorithm.sort.bubble_sort.BubbleSort;
 import com.algorithm.sort.selection_sort.SelectionSort;
 
@@ -29,14 +30,19 @@ public class Main {
 //
 //        Object[] result3 = ArrayReverse.reverseWithStream(array3);
 //        System.out.println(Arrays.toString(result3));
+//
+//        //bubble sort
+//        int[] array1 = {10, 5, 88, 66, 111, 0, 34, 29};
+//        //BubbleSort.sort(array1);
+//        System.out.println(Arrays.toString(array1));
+//
+//        SelectionSort.sort(array1);
+//        System.out.println(Arrays.toString(array1));
 
-        //bubble sort
-        int[] array1 = {10, 5, 88, 66, 111, 0, 34, 29};
-        //BubbleSort.sort(array1);
-        System.out.println(Arrays.toString(array1));
+        //string reverse
+        StringReverse.ReverseWithStringBuilder("Hello_World");
+        StringReverse.ReverseWithArray("Hello_world");
 
-        SelectionSort.sort(array1);
-        System.out.println(Arrays.toString(array1));
 
     }
 }
